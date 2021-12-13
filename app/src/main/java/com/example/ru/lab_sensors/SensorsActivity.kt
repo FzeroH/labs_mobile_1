@@ -8,7 +8,7 @@ import android.hardware.SensorManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.ru.R
 
 class SensorsActivity : AppCompatActivity(),SensorEventListener {
@@ -17,16 +17,10 @@ class SensorsActivity : AppCompatActivity(),SensorEventListener {
     private lateinit var sensor: Sensor
     private lateinit var view: View
 
-
-    private val lastUpdate: Long = 0
-    private var last_x = 0f
-    private var last_y: Float = 0f
-    private var last_z: Float = 0f
-    private val SHAKE_THRESHOLD = 600
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sensors)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         view = findViewById(R.id.view)
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)

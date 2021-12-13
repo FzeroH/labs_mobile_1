@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.ru.R
 
 class IntentActivity : AppCompatActivity() {
@@ -20,6 +21,8 @@ class IntentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intent)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         imageView = findViewById(R.id.image_view)
         val button: Button = findViewById(R.id.button)

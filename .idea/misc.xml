@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/sauru/Desktop/GitRep/labs/app/src/main/res/layout/activity_http.xml" value="0.1" />
-        <entry key="..\:/Users/sauru/Desktop/GitRep/labs/app/src/main/res/layout/activity_intent.xml" value="0.278125" />
+        <entry key="..\:/Users/sauru/Desktop/GitRep/labs/app/src/main/res/layout/activity_http.xml" value="0.22" />
+        <entry key="..\:/Users/sauru/Desktop/GitRep/labs/app/src/main/res/layout/activity_intent.xml" value="0.2" />
         <entry key="..\:/Users/sauru/Desktop/GitRep/labs/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/sauru/Desktop/GitRep/labs/app/src/main/res/layout/activity_sensors.xml" value="0.278125" />
+        <entry key="..\:/Users/sauru/Desktop/GitRep/labs/app/src/main/res/layout/activity_sqlite.xml" value="0.22" />
         <entry key="..\:/Users/sauru/Desktop/GitRep/labs/app/src/main/res/layout/activity_web_view.xml" value="0.1" />
         <entry key="..\:/Users/sauru/Desktop/GitRep/labs/app/src/main/res/layout/response_item.xml" value="0.278125" />
+        <entry key="..\:/Users/sauru/Desktop/GitRep/labs/app/src/main/res/layout/todos_item.xml" value="0.22" />
       </map>
     </option>
   </component>
