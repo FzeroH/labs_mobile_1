@@ -19,7 +19,7 @@ class TodosViewModel(private val repository: Repository): ViewModel() {
         }
     }
 
-    suspend fun deleteTodo(id: Int) {
+     fun deleteTodo(id: Int) {
         try{
             viewModelScope.launch {
                 repository.deleteTodo(id)

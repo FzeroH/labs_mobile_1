@@ -12,7 +12,7 @@ interface TodosDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addTodo(todo: TodosEntity)
 
-    @Query("DELETE FROM Todos WHERE 'id' = :id")
+    @Query("DELETE FROM Todos WHERE id = :id")
     suspend fun deleteTodo(id: Int)
 
 }

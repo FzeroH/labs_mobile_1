@@ -10,10 +10,15 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ru.App
 import com.example.ru.R
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class TodosAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class TodosAdapter(clickInterface: ClickInterface): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var todosList : List<TodosEntity> = ArrayList()
+
+    val click = clickInterface
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -35,13 +40,20 @@ class TodosAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         todosList = newTodosList
     }
 
-    class TodosViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
+    inner class TodosViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
         private var done: CheckBox  = itemView.findViewById(R.id.done)
         private var todo: TextView = itemView.findViewById(R.id.todo)
         private var delete: ImageView = itemView.findViewById(R.id.delete)
+        private val job = CoroutineScope(Dispatchers.Main)
 
         fun bind(item: TodosEntity){
             todo.text = item.todo
+            delete.setOnClickListener {
+                click.deleteTodo(item.id)
+            }
         }
+    }
+    interface ClickInterface{
+        fun deleteTodo(id: Int)
     }
 }
